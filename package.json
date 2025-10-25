@@ -1,0 +1,16 @@
+{
+  "name": "resident-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "report": "playwright show-report",
+    "allure:generate": "allure generate --clean allure-results && allure open allure-report || true"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "allure-playwright": "^2.15.1"
+  }
+}
