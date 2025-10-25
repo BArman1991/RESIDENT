@@ -1,5 +1,6 @@
 import { defineConfig } from '@playwright/test';
 
+
 export default defineConfig({
   timeout: 60000,
   expect: { timeout: 15000 },
@@ -7,7 +8,7 @@ export default defineConfig({
   workers: 1,
   testDir: 'tests',
   use: {
-    headless: false,
+    headless: !!process.env['CI'],
     viewport: { width: 1366, height: 900 },
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
@@ -22,7 +23,6 @@ export default defineConfig({
     {
       name: 'ui',
       testDir: 'tests/ui',
-      use: { headless: false },
     },
     {
       name: 'api',
