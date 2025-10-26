@@ -12,6 +12,7 @@ npx playwright install --with-deps
 
 
 ### Test Structure
+
 tests/ 
     api tests/
     ui end-to-end tests/
@@ -29,5 +30,7 @@ Run All tests (UI + API): npx playwright test
 
 ###Reports 
 HTML Report: npx playwright show-report
+
 Allure Report: npm run allure:generate
+
 Trace: npx playwright show-trace test-results/**/trace.zip
