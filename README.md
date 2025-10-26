@@ -7,6 +7,7 @@ git clone <https://github.com/BArman1991/RESIDENT>
 
 ### Install dependencies
 npm ci
+
 npx playwright install --with-deps
 
 
