@@ -2,6 +2,9 @@
 
 ## Project Setup
 
+# Clone repository
+git clone <https://github.com/BArman1991/RESIDENT>
+
 ### Install dependencies
 npm ci
 npx playwright install --with-deps
@@ -23,7 +26,7 @@ Run UI tests: npx playwright test tests/ui
 
 Run All tests (UI + API): npx playwright test
 
-###Report
-npx playwright show-report
-
+###Reports 
+HTML Report: npx playwright show-report
+Allure Report: npm run allure:generate
 Trace: npx playwright show-trace test-results/**/trace.zip
