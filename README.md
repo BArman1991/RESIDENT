@@ -15,9 +15,12 @@ npx playwright install --with-deps
 
 tests/ 
     api tests/
+    
     ui end-to-end tests/
+
 src/ 
     fixtures/ Shared fixtures and base setup
+
     pages/    Page Object Model (POM) classes
 
 ### Run Tests
