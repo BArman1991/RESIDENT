@@ -1,11 +1,10 @@
 import { defineConfig } from '@playwright/test';
 
-
 export default defineConfig({
   timeout: 60000,
   expect: { timeout: 15000 },
   retries: 0,
-  workers: 1,
+  workers: process.env.CI ? 2 : 1, 
   testDir: 'tests',
   use: {
     headless: !!process.env['CI'],
@@ -17,7 +16,7 @@ export default defineConfig({
   reporter: [
     ['line'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }],
-    ['allure-playwright']
+    ['allure-playwright'],
   ],
   projects: [
     {
@@ -28,6 +27,6 @@ export default defineConfig({
       name: 'api',
       testDir: 'tests/api',
       use: { headless: true },
-    }
+    },
   ],
 });
